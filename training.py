@@ -19,7 +19,7 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
 #cargamos el json con los intents
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('intents.json',encoding='utf-8').read())
 
 words = []
 tags = []

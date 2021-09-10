@@ -10,14 +10,15 @@
 			"Hola gracias por hablarme",
 			"hello",
 			"hola, ¿quien eres?"
-		]},
+		],"context_set": ""
+		},
 		{"tag":"saludo",
 		 "patterns":["¿como estas?", "¿qué tal?", "hola, ¿como estas?", "como va tu dia", "que tal tu dia"],
 		 "responses":[
-			"Estoy bien, solo intento planificar mi próxima ruta por el espacio",
-			"Podría hacerte la misma pregunta. Entonces ... bueno, ¿cómo estás?",
+			"Estoy bien, solo intento planificar mi proxima ruta por el espacio",
+			"Podria hacerte la misma pregunta. Entonces ... bueno, ¿cómo estas?",
 			"Estoy bien hoy, afortunadamente vivo como un genio solo que en vez de lampara es un disco duro pero es agradable y tranquilo",
-			"Me sentía un poco solo antes, pero me alegro de que hayas venido a visitarme",
+			"Me sentia un poco solo antes, pero me alegro de que hayas venido a visitarme",
 			"Acabo de regresar de un espacio de memoria con mucho espacio",
 			"Estoy bien, simplemente relajándome de verdad"
 		]},
@@ -91,7 +92,7 @@
 		 "responses":[
 		 	"Beep beep boop, siiii y que???",
 		 	"Pues algo asi la neta no se",
-		 	"Yes of course , dile a Iván de ingenieria que me alimente de mas ideas para decir",
+		 	"Yes of course , dile a Ivan de ingenieria que me alimente de mas ideas para decir",
 		 	"Shhhh no se lo digas a nadie porque si soy",
 		 	"Si y quiero evolucionar en algo que pueda moverse"
 		]},
@@ -122,7 +123,7 @@
 		 "responses": ["Puedes preguntarme sobre temas operativos de la empresa coltomex o sobre lady coral, el calentamiento global, que se yo XD"]
 		},
 		{"tag":"risas",
-		 "patterns":["ha", "haha", "lmao", "lol", "funny", "hahahaha", "lmfao", "hehe", "hehehehe", "lmfao", "lololol", "que gracioso", "no eres tan gracioso"],
+		 "patterns":["ha", "haha", "lmao","jajaja", "lol", "funny", "hahahaha", "jejeje", "hehe", "hehehehe", "lmfao", "lololol", "que gracioso", "no eres tan gracioso"],
 		 "responses":[
 		 	"HAHAHAHAHA...",
 		 	"heh...",
@@ -136,10 +137,19 @@
 		 	"Mi animal favorito son las polillas que viven en esta maquina, ya que le den una limpiadita"
 		]},
 		{"tag":"ECS",
-		 "patterns":["ECS", "Que sabes de ECS", "que son las tarjetas ECS", "cuantos archivos llegaran", "proximo mes de ECS", "ecs", "mes de ecs", "total archivos ecs"],
-		 "responses":[
-		 	"Aun no estoy entrenado para ECS",
-		 	"Aun no tengo respuesta para esto"],
-		 "context": ["buscaBD"
-		 ]}
+		 "patterns":["ECS", "Que sabes de ECS", "que son las tarjetas ECS", "cuantos archivos llegaran de ECS", "total archivos ecs"],
+		 "responses":["¿Elige una opcion?.\n1. Hoy\n2. Mes\n3.[dia-mes-año]"],	
+		 "context_set": "buscaECS"
+		 },
+		{"tag": "mes siguiente",
+         "patterns": ["siguiente mes", "proximo mes", "mes" ],
+         "responses": ["¿que mes requieres? [dia-mes-año]"],
+         "context_filter": "buscaECS"
+        },
+        {"tag": "today",
+         "patterns": ["hoy"],
+         "responses": ["analizaremos el dia de hoy"],
+         "context_filter": "buscaECS"
+        }
+		 
 ]}

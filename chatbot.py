@@ -15,12 +15,15 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('intents.json',encoding='utf-8').read())
 
 words = pickle.load(open('words.pkl', 'rb'))
 tags = pickle.load(open('tags.pkl', 'rb'))
 
 model = load_model('chatbotmodel.h5')
+
+# create a data structure to hold user context
+context = {}
 
 def clean_up_sentence(sentence):
 	sentence_words = nltk.word_tokenize(sentence)
@@ -49,23 +52,34 @@ def predict_tag(sentence):
 	return return_list
 
 def get_response(message):
-	predictedTags = predict_tag(message)
-	probability = predictedTags[0]['probability'];
+    predictedTags = predict_tag(message)
+    probability = predictedTags[0]['probability'];
+    userID = 123
+  
+    if (probability > 0.7):
+        response = ""
+        tag = predictedTags[0]['intent']
+        allIntents = intents['intents']
+        for i in allIntents:
+            if i['tag'] == tag:
+			   #response = random.choice(i['responses'])
+               #print(random.choice(i['responses']))
+               # añadimos el contexto siempre y cuando lo tenga
+               if 'context_set' in i:
+                   context[userID] = i['context_set']
 
-	if (probability > 0.7):
-		response = ""
-		tag = predictedTags[0]['intent']
-		allIntents = intents['intents']
-		for i in allIntents:
-			if i['tag'] == tag:
-			   response = random.choice(i['responses'])
-               
-			   break
-		return response
-	else: # 
-		return "Lo siento, pensé en lo que dijiste, pero aún no estoy seguro de cómo responder."
-    
-start = True
+               # Verificamos si hay contexto para el usuario
+               if not 'context_filter' in i or \
+                        (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
+                        # Respuesta
+                        response = random.choice(i['responses'])
+                        break
+        return response
+    else: # 
+        return "Lo siento, pensé en lo que dijiste, pero aún no estoy seguro de cómo responder."
+   
+
+"""start = True
 while start:
 	query = input('tu: ')
 	if query in ["bye","see you later","goodbye","sayonara","hasta luego","chau","adios","ya vete"]:
@@ -75,7 +89,7 @@ while start:
 		res = get_response(query)
 		print("BotSito:",res + '\n')
 	except:
-		print('-------')
-
+            print('-------')
+"""
 
     
