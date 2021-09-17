@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
-    <title>Clean chat box - Bootdey.com</title>
+    <title>Botsito</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -20,35 +20,24 @@
         <i class="icon wb-chat-text" aria-hidden="true"></i> Chat
       </h3>
     </div>
-    <div class="panel-body">
-      <div class="chats">
-        <div class="chat">
+    <div class="panel-body" id='panelchat' style='height: 400px; overflow-y: auto'>
+      <div class="chats" >
+        <div class="chat chat-left" id="botsito">
           <div class="chat-avatar">
-            <a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="June Lane">
+            <a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="June Lane">
               <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="...">
               <i></i>
             </a>
           </div>
           <div class="chat-body">
             <div class="chat-content">
-             <p id="response"></p>
-              <time class="chat-time" datetime="2015-07-01T11:37">11:37:08 am</time>
+             <p id="response"> Hola soy Botsito, en que puedo ayudarte</p>
+              <time class="chat-time" datetime="2015-07-01T11:37"><script>document.write(new Date().toLocaleTimeString('en-US'));</script></time>
             </div>
           </div>
         </div>
-        <div class="chat chat-left">
-          <div class="chat-avatar">
-            <a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="Edward Fletcher">
-              <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="...">
-              <i></i>
-            </a>
-          </div>
-          <div class="chat-body">
-            <div class="chat-content">
-              <p id="tu"/p>
-              <time class="chat-time" datetime="2015-07-01T11:39">11:39:57 am</time>
-            </div>
-          </div>
+        <div class="chat">
+          
         </div>
         
       </div>
@@ -72,6 +61,7 @@
 
 
 <style type="text/css">
+
 
 body {
 background:#ddd;
@@ -218,7 +208,35 @@ margin-top:10px;
 
         $("#submit-button").click(function(e) {
           e.preventDefault();
+          metMuestraChat();
+        });
 
+		$('#question').on('keypress', function (e) {
+         if(e.which === 13){
+			 e.preventDefault();
+			 $(this).removeAttr("disabled");
+			 metMuestraChat();
+			 
+         }
+		});
+		
+		
+		function metMuestraChat() { 
+
+				$('#panelchat').append('<div class="chat">'+
+											'<div class="chat-avatar">'+
+												'<a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="Edward Fletcher">'+
+													'<img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="...">'+
+													'<i></i>'+
+												'</a>'+
+											'</div>'+
+											'<div class="chat-body">'+
+												'<div class="chat-content">'+
+													'<p id="tu"> '+$("#question").val()+'</p>'+
+													'<time class="chat-time" datetime="2015-07-01T11:39">'+new Date().toLocaleTimeString('en-US')+'</time>'+
+												'</div>'+
+											'</div>'+
+										'</div>');
 
           $.ajax({
               type: "POST",
@@ -227,19 +245,45 @@ margin-top:10px;
                   question: $("#question").val()
               },
               success: function(result) {
-                $("#response").append(result.response);
-				$("#tu").append($("#question").val());
-                $("#question").val("")
+                
+
+				$('#panelchat').append('<div class="chat chat-left">'+
+										'<div class="chat-avatar">'+
+											'<a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="June Lane">'+
+												'<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="...">'+
+												'<i></i>'+
+											'</a>'+
+										'</div>'+
+										'<div class="chat-body">'+
+											'<div class="chat-content">'+
+												'<p id="response"> '+result.response+'</p>'+
+												'<time class="chat-time" datetime="2015-07-01T11:37">'+new Date().toLocaleTimeString('en-US')+'</time>'+
+											'</div>'+
+										'</div>'+
+										'</div>');
+				$("#question").val("")
+										
               },
               error: function(result) {
                   alert('error');
               }
           });
+				var scroll = function(div) {
+				var totalHeight = 0;
+				div.find('.chat').each(function(){
+				totalHeight += $(this).outerHeight();
+				});
+				div.scrollTop(totalHeight);
+			}
+			// call it:
+			scroll($('#panelchat'));
+		//$( "#chat" ).scroll();
+		//$("html,body").animate({ scrollTop: $('#panelchat').offset().top }, 800);
 
 
-
-        });
-
+		
+		}
+		
       });
 
 

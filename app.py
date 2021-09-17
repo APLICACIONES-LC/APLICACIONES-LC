@@ -4,7 +4,7 @@ import chatbot
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'enter-a-very-secretive-key-3479373'
+app.config['SECRET_KEY'] = 'miClaveEsMuySecretaParaQueTeLaSepasñoño@'
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -29,4 +29,4 @@ def chatbotResponse():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='8888', debug=True)
+    app.run(host='0.0.0.0', port='8890', debug=True)

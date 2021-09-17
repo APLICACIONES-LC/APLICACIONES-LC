@@ -1,6 +1,6 @@
 {"intents":[
 		{"tag":"hello",
-		 "patterns":["hi","hola","hello","que tranza","que tal","buen dia","buenas tardes","buenas noches","buenos dias", "good morning", "alo"],
+		 "patterns":["hi","hola","hello","que tranza","que tal","buen dia","buenas tardes","buenas noches","buenos dias", "good morning", "alo","que pedo"],
 		 "responses":[
 		 	"Saludos humano",
 			"Que paso",
@@ -10,20 +10,19 @@
 			"Hola gracias por hablarme",
 			"hello",
 			"hola, ¿quien eres?"
-		],"context_set": ""
-		},
+			]},
 		{"tag":"saludo",
-		 "patterns":["¿como estas?", "¿qué tal?", "hola, ¿como estas?", "como va tu dia", "que tal tu dia"],
+		 "patterns":["¿como estas?", "¿que tal?", "hola, ¿como estas?", "como va tu dia", "que tal tu dia"],
 		 "responses":[
 			"Estoy bien, solo intento planificar mi proxima ruta por el espacio",
 			"Podria hacerte la misma pregunta. Entonces ... bueno, ¿cómo estas?",
 			"Estoy bien hoy, afortunadamente vivo como un genio solo que en vez de lampara es un disco duro pero es agradable y tranquilo",
-			"Me sentia un poco solo antes, pero me alegro de que hayas venido a visitarme",
-			"Acabo de regresar de un espacio de memoria con mucho espacio",
+			"Me sentia un poco solo, pero me alegro de que hayas venido a visitarme",
+			"Acabo de regresar de un espacio de memoria con mucha capacidad",
 			"Estoy bien, simplemente relajándome de verdad"
 		]},
 		{"tag":"despido",
-		 "patterns":["bye","see you later","goodbye","sayonara","hasta luego","chau","adios","ya vete"],
+		 "patterns":["bye","see you later","goodbye","sayonara","hasta luego","chau","adios","ya vete","bai","ya largate","gracias por ayudarme"],
 		 "responses":[
 			"Vuelve y visítame pronto, ¿de acuerdo?",
 			"¡Adiós!",
@@ -32,7 +31,7 @@
 			"Adiós, estaré aquí"
 		]},
 		{"tag":"edad",
-		 "patterns":["¿cuantos años tienes?", "¿cual es tu edad?", "cuantos años tienes", "edad", "tu edad"],
+		 "patterns":["¿cuantos años tienes?", "¿cual es tu edad?", "cuantos años tienes", "edad", "tu edad","tienes edad"],
 		 "responses":[
 		 	"Como porque o para que quieres saber, acaso yo te lo pregunte",
 			"Mi especie realmente no envejece, ya que no somos muy ~ orgánicos ~",
@@ -40,12 +39,13 @@
 			"No fui creado para dar mi edad, mejor preguntame otra cosa"
 		]},
 		{"tag":"comidafavorita",
-		 "patterns":["comida favorita", "cual es tu comida favorita", "cual es la comida que mas te gusta"],
+		 "patterns":["comida favorita", "cual es tu comida favorita", "cual es la comida que mas te gusta","que es lo que mas te gusta comer"],
 		 "responses":[
 		 	"jajaja yo no como, pero dicen que las enchiladas de la cabbage patch estan bien ricas :=)",
-		 	"Toda la comida es rica menos la de españa, puro jamon con melon y queso que asco XD XD",
+		 	"Toda la comida es rica XD",
 		 	"mmmmm supongo que algun corte de carne",
-		 	"Pura luz consumo eso como"
+		 	"Pura luz consumo eso como",
+			"Porque mejor no me preguntas por algun tema operativo de la empresa"
 		]},
 		{"tag":"planetafavorito",
 		 "patterns":["cual es tu planeta favorito", "cual es el mejor planeta"],
@@ -54,7 +54,7 @@
 		 	"Otra de tus preguntas todas tontas ya mejor vete papito"
 		]},
 		{"tag":"recuerdofavorito",
-		 "patterns":["¿Cuál es tu recuerdo favorito?", "El mejor recuerdo", "La mejor aventura", "La aventura más genial", "Recuerdo feliz"],
+		 "patterns":["¿Cual es tu recuerdo favorito?", "El mejor recuerdo", "La mejor aventura", "La aventura mas genial", "Recuerdo feliz"],
 		 "responses":[
 		 	"Recuerdo que se fue la energia electrica, no pense revivir",
 		 	"Pues en la internet viajo a todos lados cuando no me hacen preguntas tontas",
@@ -69,18 +69,19 @@
 		 "responses":["Siempre pongo algo de rock and roll o siii  Ooooooommmmmb...."]
 		},
 		{"tag":"planetatierra",
-		 "patterns":["que sabes del calentamiento global", "que sabes del planeta tierra", "calentamiento global"],
+		 "patterns":["que sabes del calentamiento global", "que sabes del planeta tierra", "calentamiento global","esta bien el planeta tierra","porque hay terremotos"],
 		 "responses":[
 		 	"Esta muy cabron, yo que tu siembro arboles",
 		 	"Yo no sentire nada, pero tu vas a morir",
-		 	"ni le menciones, intenta hacer algo para ayudar al planeta"
+		 	"ni le menciones, intenta hacer algo para ayudar al planeta",
+			"Yo solo te digo que cada septiembre tiembla, así que duerme con tenis"
 		]},
 		{"tag": "corales",
 		 "patterns":["lady coral", "que es un coral", "te gustan los corales", "imita a lady coral"],
 		 "responses":["El coral blanco o el ambiente que estamos manejando lo estamos contaminando de una manera indimi-inimaginablemente inigmante, esto quiere decir que el coral blanco se está maltratando por eso las algas rojas el... La algas verdes puede servir como combustible, el carro seghdkelpetroleoalmente y si supieramos manejar un buen gobierno no necesitamos nada solar lenguas nahuas y su malterna aztecas porque se ve conservan todo, en sí conservaramos bosques, flores, selvas y nuestros huertos, nuestras calles fueran kioscos no estuvieramos como estuvieramos ahorita porque el coral se esta maltratando moralmente y los tiburones les cortan las aletas y los tiran asi, hay q pensar en la contimi-contami-contaminacion las algas verdes pueden ser un combustible y el agua, y las los lenguajes nahual no impiden que aprendamos y los celulares solares licuadoras menos, nos falta un puntito namas que no queremos razonar, no pego, no grito, no empujo en el metro, me avientan, si no entienden eso, menos esto, porque yo si tengo ese IQ ...No se que iq tengo... No me importa y adiós, soy una persona normal."]
 		},
 		{"tag":"enojo",
-		 "patterns":["¿que te disgusta?", "que te enoja", "que odias", "odias", "no me gusta", "te entristece", "tristeza", "menos favorito"],
+		 "patterns":["¿que te disgusta?", "que te enoja", "que odias", "odias", "odio"],
 		 "responses":[
 		 	"Me enoja cuando alienígenas hostiles intentan apoderarse de los planetas de alienígenas menos avanzados",
 			"Odio cuando la gente me pregunta qué es lo que odio> :( no, solo estoy bromeando, no se me ocurre nada, creo que te odio",
@@ -88,7 +89,7 @@
 			"Las montañas rusas, no entiendo cómo los humanos las encuentran divertidas"
 		]},
 		{"tag":"Robots",
-		 "patterns":["¿tu eres un robot?", "eres real", "eres un bot", "si eres real", "eres una maquina","chatbot"],
+		 "patterns":["¿tu eres un robot?", "eres real", "eres un bot", "si eres real", "robot","eres una maquina","chatbot","eres un chatbot"],
 		 "responses":[
 		 	"Beep beep boop, siiii y que???",
 		 	"Pues algo asi la neta no se",
@@ -97,30 +98,31 @@
 		 	"Si y quiero evolucionar en algo que pueda moverse"
 		]},
 		{"tag":"acepta",
-		 "patterns":["yes", "yeah", "yup", "ok", "okay", "cool", "yep", "good", "yea", "si","seee"],
+		 "patterns":["yes", "yeah", "yup", "ok", "okay", "cool", "yep", "good", "yea", "si","seee","sip"],
 		 "responses":["ok","yes","bien", "o si si very good"]
 		},
 		{"tag":"No",
-		 "patterns":["no", "nel", "nope"],
+		 "patterns":["no", "nel", "nope","not"],
 		 "responses":["oh", "bueno, ya que"]
 		},
 		{"tag":"no entendi",
-		 "patterns":["no se", "no entendi", "quien sabe"],
+		 "patterns":["no se", "no entendi", "quien sabe","no pues si"],
 		 "responses":["hmm, no pos ta cabron", "ni yo entendi"]
 		},
 		{"tag":"gracias",
-		 "patterns":["Thanks", "Thank", "Thank you","gracias","muchas gracias"],
-		 "responses":["Denada", "No problem :)"]
+		 "patterns":["Thanks", "Thank", "Thank you","gracias","muchas gracias","ok gracias","te agradezco","agradezco","gracias por tu ayuda"],
+		 "responses":["Denada", "No problem :)","cuando gustes"]
 		},
 		{"tag":"frustracion",
-		 "patterns":["no respondiste mi pregunta", "eso no es lo que dije", "eso no tiene sentido", "eso no tiene sentido", "no es lo que pregunte", "hermano", "mal", " No lo entiendo "," no lo entiendo "],
+		 "patterns":["no respondiste mi pregunta", "eso no es lo que dije", "yo no dije eso", "eso no tiene sentido", "no es lo que pregunte", "mal", "No lo entiendo","ni tu te entiendes"],
 		 "responses":[
 		 	"Lo siento, no lo sé. Todavía soy bastante nuevo en todo esto de 'ser un robot'. ¡Quizás me preguntes qué temas sé!",
 			"Supongo que realmente no entendí lo que dijiste, después de todo. ¡Quizás en lugar de eso me preguntes qué temas sé!"
 		]},
 		{"tag":"temas hablar",
-		 "patterns": ["que temas conoces", "que puedo preguntarte", "que sabes", "de que hablas", "de que puedes hablar"],
-		 "responses": ["Puedes preguntarme sobre temas operativos de la empresa coltomex o sobre lady coral, el calentamiento global, que se yo XD"]
+		 "patterns": ["que temas conoces", "que puedo preguntarte", "que sabes", "de que hablas", "de que puedes hablar","que es lo que puedo preguntarte","necesito de tu ayuda","puedes ayudarme",
+						"ayuda","necesito preguntarte algo","te pregunto","pregunta","necesito que me ayudes","tu puedes ayudarme","hablame de ti"],
+		 "responses": ["Puedes preguntarme sobre temas operativos de la empresa coltomex, corales, el calentamiento global, que se yo XD"]
 		},
 		{"tag":"risas",
 		 "patterns":["ha", "haha", "lmao","jajaja", "lol", "funny", "hahahaha", "jejeje", "hehe", "hehehehe", "lmfao", "lololol", "que gracioso", "no eres tan gracioso"],
@@ -130,6 +132,14 @@
 		 	"haha :)",
 		 	"No pues si da risa jajaja'"
 		 ]},
+		 {"tag":"groserias",
+		 "patterns":["puto", "puta", "vete a la verga","verga puto", "putito", "robot puto", "botsito puto", "chinga tu madre", "chigada madre", "ctm", "puta madre", "tu puta madre", "di groserias", "groserias"],
+		 "responses":[
+		 	" (╯°□°）╯︵ ┻━┻ no me digas cosas feas",
+		 	"Estoy programado para no insultarte asi que me aguanto las ganas >:(",
+		 	"ب_ب nooooo",
+		 	"No pues si da risa ja ja (•̀o•́)ง'"
+		 ]},
 		{"tag":"animales planeta",
 		 "patterns":["te gustan los perros", "te gustan los gatos","te gustan los perritos", "te gustan los gatiytos", "perros", "gatos", "cual es tu animal favorito", "tu animal favorito"],
 		 "responses":[
@@ -137,19 +147,35 @@
 		 	"Mi animal favorito son las polillas que viven en esta maquina, ya que le den una limpiadita"
 		]},
 		{"tag":"ECS",
-		 "patterns":["ECS", "Que sabes de ECS", "que son las tarjetas ECS", "cuantos archivos llegaran de ECS", "total archivos ecs"],
-		 "responses":["¿Elige una opcion?.\n1. Hoy\n2. Mes\n3.[dia-mes-año]"],	
+		 "patterns":["ECS","ecs", "que sabes de ECS", "que son las tarjetas ECS", "cuantos archivos llegaran de ECS", "total archivos ecs"],
+		 "responses":["¿Elige una opcion?.</br>Hoy</br>Mes</br>Dia"],
 		 "context_set": "buscaECS"
 		 },
-		{"tag": "mes siguiente",
-         "patterns": ["siguiente mes", "proximo mes", "mes" ],
-         "responses": ["¿que mes requieres? [dia-mes-año]"],
+		{"tag": "mes siguiente mensaje",
+         "patterns": ["siguiente mes", "proximo mes", "mes","Mes" ],
+         "responses": ["¿que mes requieres? ejemplo: [ene-2021] o [01-2021] debes incluir los corchetes"],
+         "context_filter": "buscaECS"
+        },
+		{"tag": "dia",
+         "patterns": ["dia","Dia","que dia","proximos dias"],
+         "responses": ["¿que día requieres buscar? ejemplo: [01-ene-2021] o [01-01-2021] debes incluir los corchetes"],
+         "context_filter": "buscaECS"
+        },
+		{"tag": "busca dia ecs",
+         "patterns": ["[01-12-1994]","[02-12-1994]","[03-12-1994]","[04-12-1994]","[05-12-1994]","[06-12-1994]","[07-12-1994]","[08-12-1994]","[09-12-1994]","[10-12-1994]","[11-12-1994]","[12-12-1994]",
+					  "[13-12-1994]","[14-12-1994]","[15-12-1994]","[16-12-1994]","[17-12-1994]","[18-12-1994]","[19-12-1994]","[20-12-1994]","[21-12-1994]","[22-12-1994]","[23-12-1994]","[24-12-1994]",
+					  "[25-12-1994]","[26-12-1994]","[27-12-1994]","[28-12-1994]","[29-12-1994]","[30-12-1994]","[31-12-1994]","1234567890-12345667890-1234567890","[1234567890-12345667890-1234567890]"],
+         "responses": ["BuscandoMesDia"],
          "context_filter": "buscaECS"
         },
         {"tag": "today",
-         "patterns": ["hoy"],
-         "responses": ["analizaremos el dia de hoy"],
+         "patterns": ["hoy","Hoy"],
+         "responses": ["diaDeHoy"],
          "context_filter": "buscaECS"
+        },
+        {"tag": "coltomex",
+         "patterns": ["que es coltomex","coltomex","trabajo en coltomex","empresa coltomex"],
+         "responses": ["Coltomex es una empresa en la CDMX"]
         }
 		 
 ]}

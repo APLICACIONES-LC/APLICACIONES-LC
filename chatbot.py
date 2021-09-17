@@ -78,8 +78,8 @@ def get_response(message):
     else: # 
         return "Lo siento, pensé en lo que dijiste, pero aún no estoy seguro de cómo responder."
    
-
-"""start = True
+"""
+start = True
 while start:
 	query = input('tu: ')
 	if query in ["bye","see you later","goodbye","sayonara","hasta luego","chau","adios","ya vete"]:
